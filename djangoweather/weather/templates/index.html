@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static  'css/style.css' %}">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class='headermain'>
+
+            <div class="search">
+                <div class="sear">
+                    <form action="#s">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Search weater" class="search_">
+                        <input type="button" class="ser" value="Search..."
+                            style="background-color: blueviolet; border: 2px solid green; cursor: pointer;">
+                    </form>
+                </div>
+            </div>
+
+            <div class="navbar">
+                <div class="nav active">Home</div>
+                <div class="nav">Contact</div>
+                <div class="nav">Services</div>
+                <div class="nav">Register</div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <article>
+            <div class="me">
+
+                <div class="img">
+                    <img src=" {% static 'images/me.jpg' %}" alt="" height="500" width="600">
+                </div>
+
+                <div class="texttitle">
+                    <h1>My name is</h1>
+                    <h2>Aaysuh Basnet</h2>
+                    <h2>I'm a</h2>
+                    <h3 id="element">And I'm a software developer.</h3>
+                </div>
+            </div>
+
+
+            <div class="a">
+                <div class="show_weather">
+                    <img src="" alt="">
+                    <p class="deg">4deg</p>
+
+                </div>
+            </div>
+
+
+        </article>
+
+
+    </main>
+
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full stack developer', 'Software developer'],
+            typeSpeed: 50,
+            loop: true,
+            loopCount: Infinity
+        });
+
+
+
+        const value_se = document.getElementsByClassName('search_')[0];
+        const search_input = document.getElementsByClassName('ser')[0];
+        search_input.addEventListener('click', async (e) => {
+            const cityName = value_se.value;
+            const url = `https://weather338.p.rapidapi.com/locations/search?query=${encodeURIComponent(cityName)}&language=en-US`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '27ada6319amsh17c71601d268d31p1f5a7fjsn64b573764a2d',
+                    'X-RapidAPI-Host': 'weather338.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.text();
+                console.log(result);
+                console.log(result)
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

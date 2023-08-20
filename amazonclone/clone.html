@@ -1,11 +1,1304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
+
 <body>
-    <h1>STARTING SOON</h1>
+    <header>
+        <div class="navbars">
+            <ul class="navs">
+                <li class="logo ">
+                    <img src="./image/amazon_logo.png" alt="" height="60">
+                </li>
+                <li class=" nav">
+                    <div class="del">
+                        Delivery to
+                        <span class="bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>Nepal</span>
+                    </div>
+                </li>
+
+                <li class=" search">
+                    <div class="searches">
+                        <select name="all" id="all">]
+                            <option value="">All</option>
+                            <option value="">Beauty</option>
+                            <option value="">Fashion</option>
+                            <option value="">makup</option>
+                            <option value="">shoes</option>
+                        </select>
+                        <input type="text" class="searchinput hover">
+                        <div class="searchbtn hover">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nav ee">
+                    english
+
+
+                </li>
+                <!-- Card -->
+                <li class="nav hello">
+                    Hello, singn in
+                    <span class="bold">Account and Lists<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg></span>
+                </li>
+                <li class="nav return">
+                    Returns
+                    <span class="bold">and Order</span>
+                </li>
+
+                <li class="nav card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                        class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" />
+                    </svg>Card
+                </li>
+
+            </ul>
+        </div>
+        <div class="anothernav">
+            <div class="anotherallnavs">
+
+                <div class="nav2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-blockquote-right" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm10.113-5.373a6.59 6.59 0 0 0-.445-.275l.21-.352c.122.074.272.17.452.287.18.117.35.26.51.428.156.164.289.351.398.562.11.207.164.438.164.692 0 .36-.072.65-.216.873-.145.219-.385.328-.721.328-.215 0-.383-.07-.504-.211a.697.697 0 0 1-.188-.463c0-.23.07-.404.211-.521.137-.121.326-.182.569-.182h.281a1.686 1.686 0 0 0-.123-.498 1.379 1.379 0 0 0-.252-.37 1.94 1.94 0 0 0-.346-.298zm-2.168 0A6.59 6.59 0 0 0 10 6.352L10.21 6c.122.074.272.17.452.287.18.117.35.26.51.428.156.164.289.351.398.562.11.207.164.438.164.692 0 .36-.072.65-.216.873-.145.219-.385.328-.721.328-.215 0-.383-.07-.504-.211a.697.697 0 0 1-.188-.463c0-.23.07-.404.211-.521.137-.121.327-.182.569-.182h.281a1.749 1.749 0 0 0-.117-.492 1.402 1.402 0 0 0-.258-.375 1.94 1.94 0 0 0-.346-.3z" />
+                    </svg>All</div>
+                <div class="nav2">Today's Deals</div>
+                <div class="nav2">Customer Service</div>
+                <div class="nav2">Registry</div>
+                <div class="nav2">Gift Cards</div>
+                <div class="nav2">Sell</div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- For your -->
+
+    <main>
+        <div class="mainleader">
+            <div class="imagess"></div>
+
+            <div class="a1"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                    class="bi bi-caret-left" viewBox="0 0 16 16">
+                    <path
+                        d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                </svg></div>
+            <div class="a2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                    class="bi bi-caret-right" viewBox="0 0 16 16">
+                    <path
+                        d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                </svg>
+            </div>
+
+        </div>
+        <div class="second">
+
+            <div class="child ">
+                <h2 class="game">Gaming accessories</h2>
+                <div class="c1">
+
+                    <div class="cc1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg"
+                            alt="">
+                        <p class="p">Headsets</p>
+
+                    </div>
+                    <div class="cc2">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB667159063_.jpg"
+                            alt="">
+                        <p class="p">Keyboards</p>
+
+                    </div>
+                </div>
+
+
+                <div class="c2">
+                    <div class="cc3">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg"
+                            alt="">
+                        <p class="p">Computer mice</p>
+
+                    </div>
+
+                    <div class="cc2">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg"
+                            alt="">
+                        <p class="p">Keyboards</p>
+
+                    </div>
+
+                </div>
+                <div class="shopnow" style="margin-top: 1.2rem;">
+                    <p class="s" style="color: red;margin-top: -1.1rem;">Shop now</p>
+                </div>
+
+            </div>
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Health and Personal Care</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2022/February/DashboardCards/GW_CONS_AUS_HPC_HPCEssentials_CatCard_Desktop1x._
+                        SY304_CB627424361_.jpg" alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child cc">
+                <div class="top1">
+                    <p class="f">Beauty picks</p>
+                </div>
+                <div class="forimage">
+                    <img class="aaa"
+                        src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg"
+                        alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop now</p>
+                </div>
+            </div>
+
+            <div class="child1">
+                <div class="forsignup">
+                    <p class="si">Sign in for the best experience</p>
+                    <button>Sign in securely</button>
+                </div>
+
+                <di class="adimage">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg"
+                        alt="">
+                </di>
+            </div>
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">For your Fitness Needs</p>
+                </div>
+                <div class="forimage">
+                    <img class="i" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Fitness_1X._SY304_CB639748186_.jpg"
+                        alt="canmatic" width="322" height="303">
+                </div>
+                <div class="shopnow">
+                    <p class="s" style="color: red;">Shop now</p>
+                </div>
+            </div>
+
+
+
+            <div class="child ">
+                <h2 class="game">Gaming accessories</h2>
+                <div class="c1">
+
+                    <div class="cc1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg"
+                            width="150" alt="">
+                        <p class="p">Dining</p>
+
+                    </div>
+                    <div class="cc2">
+                        <img class="a" style="margin-left: 3rem;"
+                            src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg"
+                            width="150" alt="">
+                        <p class="p" style="margin-left: 3rem;">Home</p>
+                    </div>
+                </div>
+
+
+                <div class="c2">
+                    <div class="cc3">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg"
+                            alt="" height="108" width="150">
+                        <p class="p">Kitchen</p>
+
+                    </div>
+
+                    <div class="cc2">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg"
+                            width="150" alt="" style="margin-left: 3rem;">
+                        <p class="p" style="margin-left: 3rem;">Health and Beauty</p>
+
+                    </div>
+
+                </div>
+
+                <div class="shopnow" style="margin-top: 0.5rem;">
+                    <p class="s" style="color: red;">Shop now</p>
+                </div>
+            </div>
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">Home refresh ideas</p>
+                </div>
+                <div class="forimage">
+                    <img class="i" src="https://images-na.ssl-images-amazon.com/images/G/01/home/THILGMA/SpringEvent2023/XCM_CUTTLE_1559454_3018199_379x304_1X_en_US._SY304_CB592739737_.jpg"
+                        alt="canmatic" width="322" height="333">
+                </div>
+
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s">Shop Kitchen upgrades</p>
+                </div>
+            </div>
+
+
+            <div class="child">
+                <div class="top1">
+                    <p class="f">New arrivals in Toys</p>
+                </div>
+                <div class="forimage">
+                    <img class="i" src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Toys_1X._SY304_CB639759658_.jpg"
+                        alt="canmatic" width="322" height="333">
+                </div>
+                <div class="shopnow" style="margin-top: -1.4rem;">
+                    <p class="s" style="color: red;">Shop now</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="child2">
+            <div class="top1">
+                <p class="f">Home refresh ideas</p>
+            </div>
+
+            <div class="images">
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+                <div class="childd">
+                    <div class="forimage">
+                        <div class="i">
+                            <img src="https://m.media-amazon.com/images/I/5176GNnYV-L._AC_SY200_.jpg" alt="canmatic">
+                        </div>
+
+                    </div>
+                    <div class="shopnow">
+                        <p class="s">Shop Kitchen upgrades</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="left fl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor"
+                        class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg>
+                    <!-- <button class="fl">Left</button> -->
+                </div>
+                <div class="right r">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+
+                    <!-- <button class="r">right</button> -->
+
+                </div>
+            </div>
+
+
+
+        </div>
+        </div>
+
+    </main>
+
+
+
+
+    <footer>
+        <div class="w"></div>
+
+        <div class="mainfooter">
+            <div class="firstfooter">
+                <p class="p">See personalized recommendations</p>
+                <div class="butt">
+                    <button class="bt">Sign in</button>
+                </div>
+                <p class="p">New customer?<a href="#">Start here.</a></p>
+            </div>
+
+            <div class="back">
+                <div class="backtotop">
+                    Back to top
+                </div>
+            </div>
+
+            <div class="mainfoothers">
+                <div class="one">
+                    <h5>Get to Know Us</h5>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <p>About Amazon</p>
+                    <p>Investor Relations</p>
+                    <p> Amazon Devices</p>
+                    <p> Amazon Science</p>
+                </div>
+
+
+                <div class="one">
+                    <h5>Get to Know Us</h5>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <p>About Amazon</p>
+                    <p>Investor Relations</p>
+                    <p> Amazon Devices</p>
+                    <p> Amazon Science</p>
+                </div>
+
+                <div class="one">
+                    <h5>Get to Know Us</h5>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <p>About Amazon</p>
+                    <p>Investor Relations</p>
+                    <p> Amazon Devices</p>
+                    <p> Amazon Science</p>
+                </div>
+
+
+                <div class="one">
+                    <h5>Get to Know Us</h5>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <p>About Amazon</p>
+                    <p>Investor Relations</p>
+                    <p> Amazon Devices</p>
+                    <p> Amazon Science</p>
+                </div>
+            </div>
+
+
+            <div class="forlogo">
+                <img src="./image/amazon_logo.png" alt="" height="100" width="150">
+                <div class="buttons">
+                    <select id="language" name="language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <!-- Add more language options as needed -->
+                    </select>
+                    <button>$ USD - U.S. Dollar</button>
+                    <button>United States</button>
+                </div>
+            </div>
+
+            <div class="longlasting">
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+                <div class="so">
+                    <h6>
+                        Amazon Music
+                    </h6>
+                    <p>
+                        Stream millions
+                        of songs</p>
+                </div>
+
+
+            </div>
+
+            <div class="copyright">
+                <div class="ff">
+                    <p>Conditions of Use</p>
+                    <p>Privacy Notice</p>
+                    <p>
+                        Your Ads Privacy Choices
+                    </p>
+                </div>
+                <div class="ss">
+                    <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- <img src="https://m.media-amazon.com/images/I/71U-Q+N7PXL._SX3000_.jpg" alt=""> -->
+
+
+    <script>
+
+        const left = document.querySelector('.fl');
+        const right = document.querySelector('.r');
+        const containerWidth = window.innerWidth;
+        const allthediv = document.querySelectorAll('.childd');
+        const images = document.querySelector('.images');
+        const backTopTop = document.getElementsByClassName('backtotop')[0];
+
+
+        window.addEventListener('scroll', (e) => {
+            console.log(e)
+        })
+
+        const scrollOptions = {
+            top: 0,
+            left: 0,
+            behavior: "smooth" // Set the behavior to "smooth" for smooth scrolling
+        };
+
+        backTopTop.addEventListener('click', () => {
+            window.scrollTo(scrollOptions)
+
+        })
+
+
+
+
+        right.onclick = function () {
+            scrollImages(300);
+        };
+
+        left.onclick = function () {
+            scrollImages(-300);
+        };
+
+
+
+
+
+
+
+
+        // For your Fitness
+        function scrollImages(distance) {
+            const start = images.scrollLeft;
+            const end = start + distance;
+            const duration = 500; // Adjust the duration as desired
+            const increment = 20;
+            let currentTime = 0;
+
+            const animateScroll = function () {
+                currentTime += increment;
+                const scrollAmount = easeInOutQuad(currentTime, start, distance, duration);
+                images.scrollLeft = scrollAmount;
+
+                if (currentTime < duration) {
+                    requestAnimationFrame(animateScroll);
+                }
+            };
+
+            animateScroll();
+        }
+
+        // Easing function for smooth animation
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+
+
+    </script>
+
+
+
 </body>
+
 </html>

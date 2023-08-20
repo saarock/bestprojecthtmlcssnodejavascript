@@ -3,7 +3,15 @@ declare var console: Console;
 class naem{
     public name:string;
     public caste :string;
+
+    // If protected then we can acess from the sub classs
     protected age:number
+
+
+
+
+    // accpt own class from other outside cannot acess 
+    private n: string = 'Hello aayush basnet';
 
 constructor(name:string, caste:string, age:number) {
     this.name= name;
@@ -16,6 +24,7 @@ public get() {
     console.log(this.bb())
 }
 private bb() {
+    console.log(this.n);
     return this.name
 }
 
@@ -25,9 +34,16 @@ private password() {
 }
 
 
-const a = new naem('aaysh', 'basnet',12);
+class bb extends naem {
+    so () {
+        this.age
+    }
+}
 
+
+const a = new naem('aaysh', 'basnet',12);
 const ll = a.get()
+
 
 
 // class b extends naem {
@@ -43,7 +59,18 @@ const ll = a.get()
 
 
 
+interface a {
+    name: string,
+    age: Number,
 
+}
+
+
+let aa: a = {
+    name:"aaysh",
+    age:12
+}
+console.log(aa)
 
 
 

@@ -52,3 +52,4 @@ e.innerHTML =`${values['name']} (${values['country']}) `
     console.log(er)
   }
 }
+

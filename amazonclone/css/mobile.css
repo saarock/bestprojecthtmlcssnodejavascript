@@ -1,0 +1,246 @@
+@media only screen and (max-width: 1420px) {
+    .child {
+        width: 23rem;
+        /* text-align: center; */
+        /* height: 11rem; */
+    }
+
+    body {
+        /* background-color: red; */
+    }
+
+    .second {
+        /* background-color: red; */
+        /* position: relative; */
+        /* background-color: whitesmoke; */
+        top: -8rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        /* overflow: auto; */
+        /* position: absolute; */
+        position: relative;
+        top: -24rem;
+        place-items: center;
+        padding: 1.2rem;
+
+    }
+
+}
+
+
+@media only screen and (max-width:1339px) {
+    .nav {
+        font-size: 0.6rem;
+    }
+
+    .bold {
+        font-size: 0.6rem;
+
+    }
+
+    /* .second {
+     top: -8rem;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     place-items: center;
+     position: relative;
+     top: -24rem;
+     place-items: center;
+     padding: 1.2rem;
+    
+      } */
+}
+
+
+@media only screen and (max-width:1277px) {
+    .card {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:2077px) {
+    .second {
+        /* background-color: red; */
+        /* position: relative; */
+        /* background-color: whitesmoke; */
+        top: -8rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        place-items: center;
+        /* overflow: auto; */
+        /* position: absolute; */
+        position: relative;
+        top: -24rem;
+        place-items: center;
+        padding: 1.2rem;
+
+    }
+}
+
+@media only screen and (min-width:2000px) {
+    .second {
+        /* background-color: red; */
+        /* position: relative; */
+        /* background-color: whitesmoke; */
+        top: -8rem;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        place-items: center;
+        /* overflow: auto; */
+        /* position: absolute; */
+        position: relative;
+        top: -24rem;
+        place-items: center;
+        padding: 1.2rem;
+
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:1210px) {
+    .return {
+        display: none;
+    }
+
+    .hello {
+        display: none;
+    }
+
+    .ee {
+        display: none;
+    }
+
+    .child {
+        width: 21rem;
+        /* text-align: center; */
+        /* height: 11rem; */
+    }
+
+    .cc1 img {
+        width: 8rem;
+    }
+
+    .cc2 img {
+        width: 8rem;
+
+    }
+
+    .cc3 img {
+        width: 8rem;
+
+    }
+
+    .aaa {
+        width: 15rem;
+
+    }
+
+    .longlasting .so {
+        position: relative;
+        left: -7rem;
+
+    }
+
+}
+
+
+@media only screen and (max-width:1131px) {
+    .longlasting {
+        /* background-color: red; */
+    }
+
+    .return {
+        display:block;
+    }
+
+    .hello {
+        display:block;
+    }
+
+    .ee {
+        display:block;
+    }
+
+    .searchinput {
+        width: 30rem;
+    }
+    .card {
+        display: block;
+    }
+
+}
+
+
+@media only screen and (max-width:1107px) {
+    .child {
+        width: 16rem;
+    }
+
+.aaa {
+        height: 17rem;
+    }
+
+    .longlasting .so {
+        position: relative;
+        left: -10rem;
+
+    }
+
+    
+    .i {
+        width: 12rem;
+        height: 15rem;
+    }
+    .a {
+        width: 1rem;
+    }
+}
+
+
+@media only screen and (max-width:1001px) {
+    
+
+    .longlasting .so {
+        position: relative;
+        left: -15rem;
+
+    }
+
+    .card {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width:890px) {
+
+    .searchinput {
+        width: 16rem;
+    }
+
+    .card {
+        display: block;
+    }
+
+    .second {
+        /* background-color: red; */
+        /* position: relative; */
+        /* background-color: whitesmoke; */
+        top: -8rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        /* overflow: auto; */
+        /* position: absolute; */
+        position: relative;
+        top: -24rem;
+        place-items: center;
+        padding: 1.2rem;
+
+    }
+}

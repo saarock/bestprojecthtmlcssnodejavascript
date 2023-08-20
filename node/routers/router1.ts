@@ -11,23 +11,10 @@ router1.get('/', (req: Request, res: Response) => {
 
 router1.get('/service', async (req: Request, res: Response) => {
     try {
-
-
-
-
-
-
-
-
-
         res.render('service')
-
-
-
     } catch (error) {
         console.log(error)
     }
-    // res.render('sevice.hbs')
 });
 
 
@@ -36,8 +23,6 @@ router1.get('/service', async (req: Request, res: Response) => {
 router1.post('/s', async (req: Request, res: Response) => {
     try {
         const { data } = await req.body;
-        // 85.3240
-        // const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13';
         const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=27.7172%2C${data}`;
         const options = {
             method: 'GET',
@@ -46,26 +31,21 @@ router1.post('/s', async (req: Request, res: Response) => {
                 'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
-        
-
-            const response = await fetch(url, options);
-            const result = await response.text();
-            console.log(result);
-
-
-
-
-
-       res.status(200).json(result)
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+        res.status(200).json(result)
 
     } catch (err) {
         console.log(err)
 
     }
+});
 
-
-
-})
+router1.use((req, res, next) => {
+    res.status(404).render('a')
+  });
+  
 
 export { router1 }
 

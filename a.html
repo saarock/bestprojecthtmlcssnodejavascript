@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  animation: scrollAnimation 10s linear infinite;
+}
+
+.item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scrolling-wrapper">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <!-- Add more item divs as needed -->
+    </div>
+  </div>
+  
+
+  <script>
+const container = document.querySelector('.container');
+
+container.addEventListener('scroll', () => {
+  if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+    container.scrollLeft = 0;
+  }
+});
+
+
+  </script>
+  
+</body>
+</html>
