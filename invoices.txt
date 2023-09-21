@@ -1,0 +1,17 @@
+Rental Invoice
+
+Customer: 1
+Equipment: Disco Light Set (Sonoff)
+Rental Date: 2023-08-23 10:51:51.152242
+Due Date: 2023-08-28 10:51:51.152242
+Total Amount: $322.0
+
+Return Invoice
+
+Customer: 1
+Equipment: Disco Light Set (Sonoff)
+Return Date: 2023-08-23 11:21:49.075175
+Rental Duration: 0 days
+Fine: $0
+Total Amount: $322.0
+

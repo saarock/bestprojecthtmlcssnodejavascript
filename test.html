@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html , body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .marquee-w {
+            position: relative;
+            display: block;
+            width: 750px;
+            height: 140px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+
+        }
+
+        .marquee {
+            position: absolute;
+            display: block;
+            margin: auto auto;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 100%;
+            height: 100%;
+
+        }
+
+        .marquee h1 {
+            display: inline-block;
+            padding-left: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            -webkit-text-stroke: 1px hsl(135, 71%, 60%);
+            color: transparent;
+            white-space: nowrap;
+            height: 100%;
+            line-height: 140px;
+            font-size: 85px;
+            animation: marquee 10s linear infinite ;
+
+        }
+
+
+        @keyframes marquee {
+            0% {
+                transform: translate(0,0);
+            }
+
+            100% {
+                transform: translate(-100%,0);
+
+            }
+            
+        }
+
+        .marquue-2 span {
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-w">
+        <div class="marquee">
+            <span>This is an infinity slider</span>
+        </div>
+
+
+        <div class="marquee marquue-2">
+            <span>This is an infinity slider</span>
+            
+        </div>
+
+    </div>
+ 
+</body>
+</html>

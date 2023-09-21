@@ -1,0 +1,5 @@
+Customer Name: ['Custumer Name', ' yyu\n']
+Equipment: ['Equipment', ' Microphone Set\n']
+Rental date: ['Brand Name:  Audio Technica\n']
+Due date: 2023:08:29
+Fine= $0

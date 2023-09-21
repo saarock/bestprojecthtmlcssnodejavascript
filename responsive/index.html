@@ -5,10 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
+<header>
+    <div class="main">
 
-<h1 class="h1">Samaj aa riya kai kya?</h1>
+
+        <div class="nav">
+            <div class="logo">
+                <h2>Logo</h2>
+            </div>
+    
+            <div class="navpart2">
+                <h4>Home</h4>
+                <h4>Store</h4>
+                <h4>Blog</h4>
+                <h4>Contact</h4>
+                <h4>Services</h4>
+            </div>
+
+            <div class="formov">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+
+    
+    const navs = document.getElementsByClassName('navpart2')[0]
+    const nav_open = document.getElementsByClassName('formov')[0];
+    nav_open.addEventListener('click', function() {
+        navs.classList.toggle('show');
+    
+    });
+</script>
 </body>
 </html>

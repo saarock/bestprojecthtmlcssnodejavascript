@@ -1,61 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-.container {
-  overflow: hidden;
-  width: 100%;
-}
-
-.scrolling-wrapper {
-  display: flex;
-  animation: scrollAnimation 10s linear infinite;
-}
-
-.item {
-  flex-shrink: 0;
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-  margin-right: 10px;
-}
-
-@keyframes scrollAnimation {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: red;
+            height: 22rem;
+            width: 12rem;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="scrolling-wrapper">
-      <div class="item">Item 1</div>
-      <div class="item">Item 2</div>
-      <div class="item">Item 3</div>
-      <!-- Add more item divs as needed -->
-    </div>
-  </div>
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script>
-const container = document.querySelector('.container');
+    <div class="box"></div>
+    <script>
+        gsap.from(".box", { x: -200 })
+    </script>
 
-container.addEventListener('scroll', () => {
-  if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-    container.scrollLeft = 0;
-  }
-});
-
-
-  </script>
-  
 </body>
 </html>

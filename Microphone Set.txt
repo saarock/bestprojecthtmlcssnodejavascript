@@ -1,0 +1,8 @@
+Custumer Name: yyu
+Equipment: Microphone Set
+Brand Name:  Audio Technica
+Rental Date= 2023-08-24 14:31:29.410707
+Due Date= 2023:08:29
+Total Amount: $ 189.0
+Total Quantity:, 96
+ 
